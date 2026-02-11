@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification réussie</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <style>
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            animation: scaleIn 0.4s ease-out;
+        }
+
+        .success-icon svg {
+            width: 48px;
+            height: 48px;
+            stroke: white;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            animation: checkmark 0.6s ease-out 0.2s both;
+        }
+
+        @keyframes checkmark {
+            0% {
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+            }
+            100% {
+                stroke-dasharray: 100;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .user-info {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .user-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .user-email {
+            font-size: 14px;
+            color: #6b7280;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    {{APP_VERSION}}
+    {{LOGO}}
+    <div class="container">
+        <div class="success-icon">
+            <svg viewBox="0 0 52 52">
+                <polyline points="14 27 22 35 38 19" />
+            </svg>
+        </div>
+
+        <h1>Authentification réussie</h1>
+        <p class="subtitle">Vous êtes maintenant connecté</p>
+
+        <div class="user-info">
+            <div class="user-name">{{USER_NAME}}</div>
+            <div class="user-email">{{USER_EMAIL}}</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="info-text">
+            Vous pouvez maintenant retourner sur votre application
+        </p>
+
+        <p class="cgu-link">
+            <a href="/cgu" target="_blank">Conditions Générales d'Utilisation</a>
+        </p>
+    </div>
+</body>
+</html>

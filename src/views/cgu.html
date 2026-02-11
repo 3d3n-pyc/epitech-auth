@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions Générales d'Utilisation</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <style>
+        .container {
+            max-width: 800px;
+            text-align: left;
+            padding: 60px 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .last-update {
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #000;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            font-size: 15px;
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #f9fafb;
+            border-left: 4px solid #000;
+            padding: 16px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #374151;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 24px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    {{APP_VERSION}}
+    {{LOGO}}
+    <div class="container">
+        <h1>Conditions Générales d'Utilisation</h1>
+        <p class="last-update">Dernière mise à jour : 31 octobre 2025</p>
+
+        <div class="highlight">
+            <p>En utilisant ce service d'authentification, vous acceptez les présentes conditions générales d'utilisation.</p>
+        </div>
+
+        <h2>1. Objet du service</h2>
+        <p>
+            Le présent service d'authentification (ci-après "le Service") permet aux utilisateurs de s'authentifier 
+            de manière sécurisée via Microsoft Entra ID (anciennement Azure Active Directory) pour accéder à des 
+            applications tierces autorisées.
+        </p>
+
+        <h2>2. Acceptation des conditions</h2>
+        <p>
+            L'utilisation du Service implique l'acceptation pleine et entière des présentes conditions générales 
+            d'utilisation (CGU). Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le Service.
+        </p>
+
+        <h2>3. Description du service</h2>
+        <h3>3.1. Fonctionnalités</h3>
+        <p>Le Service offre les fonctionnalités suivantes :</p>
+        <ul>
+            <li>Génération de codes d'authentification uniques et sécurisés</li>
+            <li>Authentification via Microsoft Entra ID</li>
+            <li>Gestion de sessions sécurisées</li>
+            <li>Vérification du statut d'authentification</li>
+        </ul>
+
+        <h3>3.2. Limitations</h3>
+        <p>Les codes d'authentification générés :</p>
+        <ul>
+            <li>Sont valables pendant 5 minutes à compter de leur création</li>
+            <li>Ne peuvent être utilisés qu'une seule fois</li>
+            <li>Sont liés à un compte Microsoft spécifique</li>
+        </ul>
+
+        <h2>4. Utilisation du service</h2>
+        <h3>4.1. Conditions d'accès</h3>
+        <p>Pour utiliser le Service, vous devez :</p>
+        <ul>
+            <li>Posséder un compte Microsoft valide</li>
+            <li>Être autorisé par l'organisation propriétaire de l'application tierce</li>
+            <li>Utiliser un navigateur web compatible et à jour</li>
+        </ul>
+
+        <h3>4.2. Utilisation appropriée</h3>
+        <p>Vous vous engagez à :</p>
+        <ul>
+            <li>Utiliser le Service uniquement à des fins légitimes</li>
+            <li>Ne pas tenter de contourner les mesures de sécurité</li>
+            <li>Ne pas partager vos codes d'authentification avec des tiers</li>
+            <li>Ne pas utiliser le Service pour des activités frauduleuses ou malveillantes</li>
+        </ul>
+
+        <h2>5. Protection des données personnelles</h2>
+        <h3>5.1. Données collectées</h3>
+        <p>Dans le cadre de l'authentification, nous collectons et traitons :</p>
+        <ul>
+            <li>Votre identifiant Microsoft (Object ID)</li>
+            <li>Votre adresse e-mail professionnelle</li>
+            <li>Votre nom d'affichage</li>
+            <li>Les horodatages de vos authentifications</li>
+        </ul>
+
+        <h3>5.2. Utilisation des données</h3>
+        <p>Les données collectées sont utilisées exclusivement pour :</p>
+        <ul>
+            <li>Permettre votre authentification auprès des applications tierces</li>
+            <li>Assurer la sécurité et l'intégrité du Service</li>
+            <li>Respecter nos obligations légales</li>
+        </ul>
+
+        <h3>5.3. Conservation des données</h3>
+        <p>
+            Vos données sont conservées aussi longtemps que nécessaire pour fournir le Service et 
+            respecter nos obligations légales. Les codes d'authentification expirés sont automatiquement 
+            marqués comme tels dans notre système.
+        </p>
+
+        <h3>5.4. Vos droits</h3>
+        <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles.</p>
+
+        <h2>6. Sécurité</h2>
+        <h3>6.1. Mesures de sécurité</h3>
+        <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données :</p>
+        <ul>
+            <li>Chiffrement des communications (HTTPS/TLS)</li>
+            <li>Authentification forte via Microsoft</li>
+            <li>Codes PKCE pour sécuriser les échanges</li>
+            <li>Sessions sécurisées et limitées dans le temps</li>
+        </ul>
+
+        <h3>6.2. Responsabilité de l'utilisateur</h3>
+        <p>Vous êtes responsable de :</p>
+        <ul>
+            <li>La confidentialité de vos identifiants Microsoft</li>
+            <li>L'utilisation de votre compte</li>
+            <li>La sécurité de votre appareil et navigateur</li>
+        </ul>
+
+        <h2>7. Disponibilité du service</h2>
+        <p>
+            Nous nous efforçons de maintenir le Service disponible 24h/24 et 7j/7, mais ne pouvons garantir 
+            une disponibilité ininterrompue. Le Service peut être temporairement indisponible pour maintenance, 
+            mises à jour ou en cas de force majeure.
+        </p>
+
+        <h2>8. Limitation de responsabilité</h2>
+        <p>
+            Le Service est fourni "tel quel" sans garantie d'aucune sorte. Dans les limites autorisées par la loi, 
+            nous déclinons toute responsabilité pour :
+        </p>
+        <ul>
+            <li>Les interruptions ou dysfonctionnements du Service</li>
+            <li>Les pertes de données résultant d'une utilisation du Service</li>
+            <li>Les dommages indirects ou consécutifs</li>
+            <li>L'utilisation non autorisée de vos informations d'authentification</li>
+        </ul>
+
+        <h2>9. Modifications du service et des CGU</h2>
+        <p>
+            Nous nous réservons le droit de modifier le Service et les présentes CGU à tout moment. 
+            Les modifications substantielles vous seront notifiées par un message affiché sur le Service. 
+            L'utilisation continue du Service après notification vaut acceptation des nouvelles conditions.
+        </p>
+
+        <h2>10. Résiliation</h2>
+        <p>
+            Nous nous réservons le droit de suspendre ou de résilier votre accès au Service en cas de :
+        </p>
+        <ul>
+            <li>Violation des présentes CGU</li>
+            <li>Utilisation frauduleuse ou abusive du Service</li>
+            <li>Non-respect des lois applicables</li>
+        </ul>
+
+        <h2>11. Contact</h2>
+        <p>
+            Pour toute question concernant ces CGU ou le Service, vous pouvez contacter l'équipe 
+            de développement via les canaux officiels de votre organisation.
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="info-text" style="text-align: center; margin-top: 40px;">
+            Made with 💖 by 3d3n
+        </p>
+    </div>
+</body>
+</html>

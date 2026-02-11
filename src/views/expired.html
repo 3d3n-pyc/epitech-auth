@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code expiré</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <style>
+        .icon {
+            width: 80px;
+            height: 80px;
+            background: #f3f4f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            animation: scaleIn 0.4s ease-out;
+        }
+
+        .icon svg {
+            width: 48px;
+            height: 48px;
+            stroke: #6b7280;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .info-box {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .info-text {
+            font-size: 14px;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .help-text {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+    {{APP_VERSION}}
+    {{LOGO}}
+    <div class="container">
+        <div class="icon">
+            <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+            </svg>
+        </div>
+
+        <h1>Code d'authentification expiré</h1>
+        <p class="subtitle">Le délai d'authentification est dépassé</p>
+
+        <div class="info-box">
+            <p class="info-text">
+                Les codes d'authentification sont valides pendant 5 minutes pour des raisons de sécurité.
+                Veuillez générer un nouveau code pour vous authentifier.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="help-text">
+            Retournez sur votre application pour générer un nouveau code
+        </p>
+
+        <p class="cgu-link">
+            <a href="/cgu" target="_blank">Conditions Générales d'Utilisation</a>
+        </p>
+    </div>
+</body>
+</html>

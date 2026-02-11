@@ -1,0 +1,38 @@
+{
+  "name": "epitech-auth",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "dev:watch": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "if [ \"$VERCEL\" = \"1\" ]; then prisma generate --schema=./prisma/schema.vercel.prisma; else prisma generate; fi && tsc",
+    "vercel-build": "prisma generate --schema=./prisma/schema.vercel.prisma && prisma db push --schema=./prisma/schema.vercel.prisma --accept-data-loss",
+    "db:push": "prisma db push",
+    "db:push:vercel": "prisma db push --schema=./prisma/schema.vercel.prisma",
+    "db:migrate": "prisma migrate dev",
+    "db:generate": "prisma generate",
+    "db:generate:vercel": "prisma generate --schema=./prisma/schema.vercel.prisma",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@azure/msal-node": "^3.8.1",
+    "@prisma/client": "^6.18.0",
+    "@types/express": "^5.0.5",
+    "@types/express-session": "^1.18.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "prisma": "^6.18.0"
+  }
+}

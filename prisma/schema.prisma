@@ -1,0 +1,37 @@
+// Prisma schema pour Microsoft Entra ID authentication
+// Production: Utilise PostgreSQL (Vercel Postgres)
+// Development: Peut utiliser SQLite en changeant le provider en "sqlite" et DATABASE_URL en "file:./dev.db"
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int        @id @default(autoincrement())
+  azureOid   String     @unique // Microsoft Entra ID Object ID
+  email      String?    @unique
+  name       String?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  authCodes  AuthCode[]
+}
+
+model AuthCode {
+  id              Int       @id @default(autoincrement())
+  code            String    @unique // Code unique pour l'authentification
+  userId          Int?
+  user            User?     @relation(fields: [userId], references: [id])
+  status          String    @default("pending") // pending, authenticated, expired
+  authUrl         String?   // URL d'authentification générée
+  codeVerifier    String?   // Pour PKCE
+  expiresAt       DateTime
+  createdAt       DateTime  @default(now())
+  authenticatedAt DateTime?
+
+  @@index([userId])
+}

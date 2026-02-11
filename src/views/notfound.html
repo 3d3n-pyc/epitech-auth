@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page introuvable</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <style>
+        .error-code {
+            font-size: 96px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1;
+            margin-bottom: 16px;
+            letter-spacing: -2px;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .details {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .details-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #9ca3af;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .details-text {
+            font-size: 14px;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 72px;
+            }
+        }
+    </style>
+</head>
+<body>
+    {{APP_VERSION}}
+    {{LOGO}}
+    <div class="container">
+        <div class="error-code">404</div>
+
+        <h1>Page introuvable</h1>
+        <p class="subtitle">La page que vous recherchez n'existe pas ou a été déplacée</p>
+
+        <div class="details">
+            <div class="details-label">Que faire ?</div>
+            <div class="details-text">
+                Vérifiez l'URL ou retournez à la page d'accueil de votre application pour générer un nouveau lien d'authentification.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="info-text">
+            Si vous pensez qu'il s'agit d'une erreur, contactez un administrateur
+        </p>
+
+        <p class="cgu-link">
+            <a href="/cgu" target="_blank">Conditions Générales d'Utilisation</a>
+        </p>
+    </div>
+</body>
+</html>
